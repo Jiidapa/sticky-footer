@@ -32,6 +32,7 @@
     </body>
 </html>
 ```
+[**example sticky footer using html**](https://codepen.io/jidapa-pattanang/pen/JjPvxyW)
 
 แปลงเป็น sticky ของ react โดยใช้ bootstrap
 1. ใน html tag ใส่ class="h-100"
