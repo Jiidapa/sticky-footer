@@ -1,3 +1,83 @@
+## Stick Footer with Bootstrap
+
+ยึด concept คือ
+```html
+...
+<html>
+    <header>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            .content {
+                min-height: 100%;
+                margin: 0 auto -50px;
+            }
+            .footer {
+                height: 50px;
+            }
+
+            footer {
+                background: #42A5F5;
+                color: white;
+                line-height: 50px;
+                padding: 0 20px;
+            }
+
+        </style>
+    </header>
+    <body>
+        <div class="content"></div>
+        <footer class="footer">my sticky footer</footer>
+    </body>
+</html>
+...
+```
+
+แปลงเป็น sticky ของ react โดยใช้ bootstrap
+1. ใน html tag ใส่ class="h-100"
+
+```html
+...
+// public/index.html
+<html class="h-100"></html>
+...
+```
+
+2. ใน body ใส่ class="h-100"
+```html
+...
+// public/index.html
+<html class="h-100">
+    <body class="h-100"></body>
+</html>
+...
+```
+
+3. ใน div id="root" ใส่ class="d-flex flex-column h-100"
+```html
+...
+// public/index.html
+<html class="h-100">
+    <body class="h-100">
+        <div id="root" class="d-flex flex-column h-100"></div>
+    </body>
+</html>
+...
+```
+4. ใน component footer ใส่ className="footer mt-auto"
+```html
+...
+// public/index.html
+<footer className="footer w-100">
+    <p className="my-0">© Hostel Management { new Date().getFullYear() }</p>
+</footer>
+...
+```
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
